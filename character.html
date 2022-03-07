@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty character</title>
+      <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+          <div id="character"></div>
+      </div>
+    </div>
+  </section>
+  <template id="character-template">
+    <div class="card character bg-light text-center mt-5 border-dark">
+      <img src="..." class="card-img-top img-thumbnail" alt="Card Image" id="image">
+      <h5 class="card-header bg-dark text-white pt-3" id="title">Card title</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Species: <span id="species"></span></li>
+          <li class="list-group-item">Status: <span id="status"></span></li>
+          <li class="list-group-item">Gender: <span id="gender"></span></li>
+          <li class="list-group-item">Location: <span id="location"></span></li>
+          <li class="list-group-item">Origin: <span id="origin"></span></li>
+        </ul>
+        <div class="card-footer bg-light pb-0"><a href="./index.html" class="btn btn-dark px-4">Back</a></div>
+      </div>
+    </div>
+  </template>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="character.js"></script>
+</body>
+</html>

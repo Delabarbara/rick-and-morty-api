@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Rick and Morty API">
+    <meta name="author" content="AJ">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <title>Rick and Morty API</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="/" class="logo"><img src="assets/images/logo.png" alt="Rick and Morty"></a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">About</a></li>
+        <li><a href="#section2">Characters</a></li>
+        <li><a href="#section3">Locations</a></li>
+        <li><a href="#section4">Episodes</a></li>
+        <li><a href="https://github.com/Delabarbara/rick-and-morty-api.git" target="_blank" class="external">GitHub</a></li>
+        <li><a href="https://rickandmortyapi.com/" target="_blank" class="external">API</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" data-section="section1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>About:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>Series</a></li>
+              <li><a href='#tabs-2'>Rick</a></li>
+              <li><a href='#tabs-3'>Morty</a></li>
+            </ul>
+            <section class='tabs-content mt-5'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/rickandmorty.png" alt="Rick and Morty">
+                  </div>
+                  <div class="col-md-6">
+                    <p class="mt-5">Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block, Adult Swim. The series follows the misadventures of cynical mad scientist Rick Sanchez and his good-hearted, but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/rick.png" alt="Rick Sanchez">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Rick Sanchez</h4>
+                    <p>Sanchez is a misanthropic alcoholic scientist inspired by Christopher Lloyd's Dr. Emmett "Doc" Brown from Back to the Future and Reed Richards from Marvel Comics.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/morty.png" alt="Morty Smith">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Mortimer "Morty" Smith</h4>
+                    <p>Morty is an anxious 14-year-old based on Michael J. Fox's Marty McFly from Back to the Future. Known for his awkward, anxious, second-guessing, and doubtful personality and low sense of self-esteem.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS -->
+  <section class="section characters" data-section="section2" id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Characters:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 justify-content-center" id="characters-list"></div>
+      <nav id="pagination" aria-label="Search pages" class="mt-4 mb-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="characters-prev">Prev</button>
+          </li>
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="characters-next">Next</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="section locations" data-section="section3" id="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Locations:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 justify-content-center" id="locations-list"></div>
+      <nav id="pagination" aria-label="Search pages" class="mt-4 mb-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="locations-prev">Prev</button>
+          </li>
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="locations-next">Next</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- EPISODES -->
+  <section class="section episodes" data-section="section4" id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Episodes:</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 justify-content-center" id="episodes-list"></div>
+      <nav id="pagination" aria-label="Search pages" class="mt-4 mb-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="episodes-prev">Prev</button>
+          </li>
+          <li class="page-item">
+            <button class="btn btn-outline-warning mx-5" id="episodes-next">Next</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CHARACTERS TEMPLATE -->
+  <template id="character-template">
+    <div class="card character bg-light text-center mx-2 my-2" id="character-link">
+      <img src="..." class="card-img-top img-thumbnail" alt="Card Image" id="image">
+      <h5 class="card-header bg-dark text-white w-100" id="title">Card title</h5>
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Species: <span id="species"></span></h6>
+        <p class="card-text">Origin: <span id="origin"></span></p>
+      </div>
+    </div>
+  </template>
+  
+  <!-- LOCATIONS TEMPLATE -->
+  <template id="location-template">
+    <div class="card text-center mx-2 my-2">
+      <h6 class="card-header text-white bg-dark">Name</h6>
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Type: <span class="type"></span></h6>
+        <p class="card-text">Dimension: <span class="dimension"></span></p>
+      </div>
+    </div>
+  </template>
+
+  <!-- EPISODES TEMPLATE -->
+  <template id="episode-template">
+    <div class="card text-center mx-2 my-2">
+      <h6 class="card-header text-white bg-info">Name</h6>
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Air date: <span class="air"></span></h6>
+      </div>
+    </div>
+  </template>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-lg fa-github"></i> <a href="https://github.com/Delabarbara/rick-and-morty-api.git" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+  <!-- Custom JS -->
+    <script src="app.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>
